@@ -38,6 +38,7 @@ namespace Sequences
             });
 //            subsequences.ToList().ForEach(kvp=>Console.WriteLine($"{kvp.Key}-[{kvp.Value.first}:{kvp.Value.last}]"));
             //merge down
+            //This could be written recrusivly but for the sake of readiblity and debugging we'll stick with a while statement.
             var rawSubSequences = subsequences.Values.ToList();
             var resultingSubSequences = new List<(int first, int last)>();
             while(rawSubSequences.Count>0)
